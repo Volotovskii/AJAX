@@ -1,0 +1,38 @@
+
+div#input {
+    padding: 15px;
+    max-width: 500px;
+    /* height: auto; */
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: rgb(226, 224, 220);
+    box-shadow: 3px 0px 2px 0 rgba(0, 0, 0, .14), 0 3px 1px -2px rgba(0, 0, 0, .2), 0 1px 5px 0 rgba(0, 0, 0, .12);
+}
+
+div#interface {
+    display: flex
+;
+    flex-direction: column;
+}
+
+
+input{
+    text-align: center;
+}
+
+div#error {
+    padding: 20px;
+    color: red;
+}
+
+#image{
+    padding: 20px;
+    text-align: center;
+}
+
+#imageContainer{
+    padding: 20px;
+    background-color: rgb(226, 224, 220);
+    box-shadow: 3px 0px 2px 0 rgba(0, 0, 0, .14), 0 3px 1px -2px rgba(0, 0, 0, .2), 0 1px 5px 0 rgba(0, 0, 0, .12);
+}
