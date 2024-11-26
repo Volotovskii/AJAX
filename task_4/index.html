@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>task_4</title>
+    <!-- add Bootstrap -->
+
+</head>
+
+<body>
+
+    <div id="input"> Резулятат смотреть через инспектор </div>
+    <script>
+
+
+function randomNumber() {
+  return new Promise((resolve, reject) => {
+    setTimeout(() => { //Для создания задержки использовать setTimeout.
+      const randomNumber = Math.floor(Math.random() * 100) + 1; // случайное целое число от 1 до 100.
+
+      if (randomNumber % 2 === 0) { //число четное
+        resolve(randomNumber); // Если сгенерированное число четное — Promise выполнится успешно (resolve),
+      } else {
+        reject(randomNumber); // если нечетное — выполнится с ошибкой (reject).
+      }
+    }, 3000); // c задержкой в три секунды
+  });
+}
+
+randomNumber()
+  .then(result => {
+    console.log(`Завершено успешно. Сгенерированное число — ${result}`);
+  })
+  .catch(error => {
+    console.log(`Завершено с ошибкой. Сгенерированное число — ${error}`);
+  })
+  ;
+    </script>
+
+</body>
+
+</html>

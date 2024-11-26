@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>task_3</title>
+    <!-- add Bootstrap -->
+
+</head>
+
+<body>
+
+    <div id="input"> Резулятат смотреть через инспектор </div>
+    <script>
+
+        window.onload = function () {
+            const userName = localStorage.getItem("userName");
+            const lastVisitDate = localStorage.getItem("lastVisitDate");
+
+            if (userName) {
+                // Пользователь не первый раз
+                alert(`Добрый день, ${userName}! Давно не виделись. В последний раз вы были у нас ${lastVisitDate}`);
+                localStorage.setItem("lastVisitDate", new Date().toLocaleString());
+            } else {
+                // Пользователь первый раз
+                const name = prompt("Добро пожаловать! Назовите, пожалуйста, ваше имя");
+                if (name) {
+                    localStorage.setItem("userName", name);
+                    localStorage.setItem("lastVisitDate", new Date().toLocaleString());
+                }
+            }
+        };
+    </script>
+
+</body>
+
+</html>
